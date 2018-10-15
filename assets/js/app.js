@@ -6,9 +6,19 @@
  */
 
 // any CSS you require will output into a single css file (app.css in this case)
-require('../css/app.css');
+require('../css/app.scss');
+require('../../node_modules/@fortawesome/fontawesome-free/css/all.min.css');
+require('../../node_modules/magnific-popup/dist/magnific-popup.css');
+
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to require it.
-// var $ = require('jquery');
-
+ var $ = require('jquery');
+  require('../../node_modules/popper.js/dist/popper.js');
+//global.$ = global.jQuery = $;
+require('../../node_modules/bootstrap/dist/js/bootstrap.js');
+require('jquery.easing');
+require('../../node_modules/magnific-popup/dist/jquery.magnific-popup.min.js');
+import '../../assets/js/jqBootstrapValidation.min.js';
+import '../../assets/js/contact_me.min.js';
+import '../../assets/js/freelancer.js'
 console.log('Hello Webpack Encore! Edit me in assets/js/app.js');
