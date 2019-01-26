@@ -1,6 +1,20 @@
 easy_admin:
     site_name: 'Aboubacar Sambare'
     entities:
+        Project:
+            class: App\Entity\Project
+            list:
+                fields:
+                    - { property: 'image', type: 'image', base_path: '%app.path.portfolio_images%' }
+            form:
+                fields:
+                    - { property: 'imageFile', type: 'file' }
+
+        Tag:
+            class: App\Entity\Tag
+        User:
+            class: App\Entity\User
+            acme_project:
+                export_path: '%kernel.project_dir/var/export/user'
+                password_encoding: { algorithm: 'bcrypt', cost: 12 }
   # change the following to the namespaces of your own entities
-        - App\Entity\Project
-        - App\Entity\User
