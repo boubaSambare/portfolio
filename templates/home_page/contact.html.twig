@@ -1,0 +1,29 @@
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+<section id="contact">
+    <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">Contacter Moi</h2>
+        <hr class="star-dark mb-5">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+                <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+                <div  id="contactForm" novalidate="novalidate">
+                    {{ form_start(form) }}
+                            {{ form_row(form.name) }}
+                            <p class="help-block text-danger"></p>
+                            {{ form_row(form.email) }}
+                            <p class="help-block text-danger"></p>
+                            {{ form_row(form.phoneNumber) }}
+                            <p class="help-block text-danger"></p>
+                            {{ form_row(form.message) }}
+
+                    {{ form_rest(form) }}
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-xl">Envoi</button>
+                    </div>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -20,6 +20,6 @@ import '../../node_modules/bootstrap/dist/js/bootstrap.js';
 import 'jquery.easing';
 import '../../node_modules/magnific-popup/dist/jquery.magnific-popup.min.js';
 import '../../assets/js/jqBootstrapValidation.min.js';
-import '../../assets/js/contact_me.min.js';
+//import '../../assets/js/contact_me.min.js';
 import '../../assets/js/freelancer.js';
 console.log('Hello Webpack Encore! Edit me in assets/js/app.js');
