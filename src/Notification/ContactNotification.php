@@ -24,8 +24,8 @@ class ContactNotification
 
     public function notify(Contact $contact)
     {
-        $message = (new \Swift_Message('Motif:'. $contact->getName()))
-            ->setFrom($contact->getEmail())
+        $message = (new \Swift_Message('New Message'))
+            ->setFrom('noreply@bouba.com')
             ->setTo('boubasambare@yahoo.it')
             ->setBody(
                 $this->renderer->render(

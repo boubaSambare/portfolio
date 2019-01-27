@@ -5,13 +5,26 @@ easy_admin:
             class: App\Entity\Project
             list:
                 fields:
+                    - { property: 'name'}
+                    - { property: 'imageFile' }
+                    - {property: 'slug'}
+                    - {property: 'description'}
                     - { property: 'image', type: 'image', base_path: '%app.path.portfolio_images%' }
+                    - { property: 'link' }
             form:
                 fields:
-                    - { property: 'imageFile', type: 'file' }
-
-        Tag:
-            class: App\Entity\Tag
+                    - { property: 'name'}
+                    - {property: 'slug'}
+                    - {property: 'description'}
+                    - { property: 'imageFile', type: 'vich_image' }
+                    - { property: 'link' }
+            show:
+                fields:
+                    - { property: 'name'}
+                    - {property: 'slug'}
+                    - {property: 'description'}
+                    - { property: 'image', type: 'image', base_path: '%%app.path.portfolio_images%' } 
+                    - { property: 'link' }      
         User:
             class: App\Entity\User
             acme_project:

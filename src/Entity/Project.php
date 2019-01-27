@@ -25,17 +25,20 @@ class Project
     private $name;
 
     /**
+     * @var string|null
      * @ORM\Column(type="string", length=255)
      */
     private $slug;
 
     /**
+     * @var string|null
      * @ORM\Column(type="string", length=255)
      */
     private $image;
 
     /**
-     * @Vich\UploadableField(mapping="product_images", fileNameProperty="image")
+     * @var File|null
+     * @Vich\UploadableField(mapping="portfolio_images", fileNameProperty="image")
      * @var File
      */
     private $imageFile;
@@ -43,12 +46,13 @@ class Project
     /**
      * @return File
      */
-    public function getImageFile(): File
+    public function getImageFile(): ?File
     {
         return $this->imageFile;
     }
 
     /**
+     * 
      * @param File $imageFile
      */
     public function setImageFile(File $image): void
@@ -83,7 +87,7 @@ class Project
     private $updatedAt;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string",)
      */
     private $description;
 

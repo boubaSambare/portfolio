@@ -21,6 +21,20 @@
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary btn-xl">Envoi</button>
                     </div>
+                    {% for label, flashes in app.session.flashbag.all %}
+    {% for flash in flashes %}
+        {% if ( label == 'success' ) %}
+        <div class="alert alert-success" role="alert">
+            {{ flash }}
+          </div>
+        {% elseif ( label == 'error' ) %}
+            <div class="alert alert-danger alert-dismissible fade show">
+                
+            </div>
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+                   
                     {{ form_end(form) }}
                 </div>
             </div>
